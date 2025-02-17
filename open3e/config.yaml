@@ -1,0 +1,26 @@
+---
+version: 0.5.0
+slug: open3e
+name: Open3e
+description: Connect to E3 Controls through CAN
+url: https://github.com/flecke-m/tree/master/open3e-ha-addon
+arch:
+  - amd64
+  - armhf
+  - aarch64
+image: open3e/open3e-{arch}
+init: false
+map:
+  - addon_config:rw
+options:
+  device: null
+  log_level: info
+  log_to_file: false
+  log_max_files: 7
+schema:
+  device: device(subsystem=tty)
+  log_level: list(debug|verbose|http|info|warn|error)?
+  log_to_file: bool?
+  log_max_files: int(1,)?
+
+startup: services
