@@ -5,9 +5,9 @@ bashio::log.info "Preparing to start...checking for devices.json"
 if ! test -f /open3e/devices.json; then
    bashio::log.info "Running open3e depcit system ... This may take a while"
    cd /open3e
-   CMD open3e_depictSystem -c can0 
+   open3e_depictSystem -c can0 
 fi
 
 bashio::log.info "Starting Open3e..."
 cd /open3e
-CMD open3e @args
+open3e @args
