@@ -8,11 +8,13 @@ arch:
   - amd64
   - armhf
   - aarch64
+hassio_api: true
+host_network: true
 init: false
 map:
-  - all_addon_config:rw
+  - addons:rw
+  - all_addon_configs:rw
 options:
-  host_network: true
   log_level: info
   log_to_file: false
   log_max_files: 7
@@ -20,5 +22,8 @@ schema:
   log_level: list(debug|verbose|http|info|warn|error)?
   log_to_file: bool?
   log_max_files: int(1,)?
-
+services:
+  - mqtt:need
 startup: services
+udev: true
+usb: true
