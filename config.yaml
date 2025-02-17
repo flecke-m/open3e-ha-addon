@@ -12,7 +12,7 @@ init: false
 map:
   - addon_config:rw
 options:
-  device: null
+#  device: null
   log_level: info
   log_to_file: false
   log_max_files: 7
