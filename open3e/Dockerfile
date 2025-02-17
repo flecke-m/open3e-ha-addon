@@ -8,6 +8,6 @@ WORKDIR /open3e
 
 RUN pip install git+https://github.com/open3e/open3e.git
 
-
-
 COPY rootfs /
+
+ENTRYPOINT [ "/sbin/tini", "--", "/docker-entrypoint.sh"]
