@@ -1,5 +1,13 @@
 #!/usr/bin/env bashio
 
+
+bashio::log.info "Preparing to start...checking can interface"
+lsmod
+ifconfig -a | grep can0
+ip link set can0 down
+ip link set can0 up
+ip link | grep can0
+
 bashio::log.info "Preparing to start...checking for devices.json"
 
 if ! test -f /open3e/devices.json; then
