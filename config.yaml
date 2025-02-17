@@ -10,14 +10,13 @@ arch:
   - aarch64
 init: false
 map:
-  - addon_config:rw
+  - all_addon_config:rw
 options:
-#  device: null
+  host_network: true
   log_level: info
   log_to_file: false
   log_max_files: 7
 schema:
-  device: device(subsystem=tty)
   log_level: list(debug|verbose|http|info|warn|error)?
   log_to_file: bool?
   log_max_files: int(1,)?
