@@ -9,10 +9,11 @@ ip link | grep can0
 
 bashio::log.info "Preparing to start...checking for devices.json"
 
-if ! test -f /open3e/devices.json; then
+if ! test -f /config/devices.json; then
    bashio::log.info "Running open3e depcit system ... This may take a while"
    cd /open3e
    open3e_depictSystem -c can0 
+   cp devices.json /config/devices.json
 fi
 
 bashio::log.info "Starting Open3e..."

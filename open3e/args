@@ -9,4 +9,4 @@ testmqtt:test
 --listen
 open3e/cmnd
 --config
-devices.json
+/config/devices.json
