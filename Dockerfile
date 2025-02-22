@@ -2,7 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-RUN apk update && apk add --no-cache git
+RUN apk update && apk add --no-cache git iproute2
 RUN mkdir -p /open3e
 WORKDIR /open3e
 
