@@ -31,5 +31,3 @@ schema:
 services:
   - mqtt:need
 startup: services
-udev: true
-usb: true
