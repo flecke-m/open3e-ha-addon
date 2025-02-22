@@ -5,7 +5,7 @@ bashio::log.info "Preparing to start...checking can interface"
 
 ifconfig -a | grep can0
 ip link set can0 down
-ip link set can0 up type can bitrate 250000
+ip link set can0 type can bitrate 250000
 ip link | grep can0
 
 bashio::log.info "Preparing to start...checking for devices.json"

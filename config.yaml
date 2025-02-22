@@ -17,10 +17,11 @@ map:
 options: {
   "args": {}
 }
-
+privileged:
+  - NET_ADMIN
 schema:
   "args": {
-      "server": "str?",
+      "can": "str?",
       "ca": "str?",
       "key": "str?",
       "cert": "str?",
