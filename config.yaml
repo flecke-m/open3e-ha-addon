@@ -14,14 +14,20 @@ init: false
 map:
   - addons:rw
   - all_addon_configs:rw
-options:
-  log_level: info
-  log_to_file: false
-  log_max_files: 7
+options: {
+  "args": {}
+}
+
 schema:
-  log_level: list(debug|verbose|http|info|warn|error)?
-  log_to_file: bool?
-  log_max_files: int(1,)?
+  "args": {
+      "server": "str?",
+      "ca": "str?",
+      "key": "str?",
+      "cert": "str?",
+      "user": "str?",
+      "password": "str?",
+      "base_topic": "str?"
+    },
 services:
   - mqtt:need
 startup: services
