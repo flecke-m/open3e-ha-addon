@@ -1,5 +1,4 @@
-#!/usr/bin/env bashio
-
+#!/usr/bin/with-contenv bashio
 
 
 bashio::log.info "Preparing to start...reading config"
