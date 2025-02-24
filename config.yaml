@@ -16,12 +16,12 @@ map:
 options: {
   "main": {
     "can": "can0",
-    "Listen-Topic": "open3e/cmnd"
+    "Listen_Topic": "open3e/cmnd"
   },
   "mqtt": {
     "Server_Topic": "127.0.0.1:1883:open3e",
-    "MQTT-User-Password": "user:password",
-    "MQTT-Format-String": "{device}_{ecuAddr:03X}_{didNumber}_{didName}",
+    "MQTT_UserPassword": "user:password",
+    "MQTT_FormatString": "{device}_{ecuAddr:03X}_{didNumber}_{didName}",
     "MQTT_ClientID": "open3e"
   }
 }
@@ -30,12 +30,12 @@ privileged:
 schema: {
   "main": {
       "can": "str",
-      "Listen-Topic": "str"
+      "Listen_Topic": "str"
   },
   "mqtt": {
       "Server_Topic": "str",
-      "MQTT-User-Password": "str",
-      "MQTT-Format-String": "str",
+      "MQTT_UserPassword": "str",
+      "MQTT_FormatString": "str",
       "MQTT_ClientID": "str"
   }
 }
