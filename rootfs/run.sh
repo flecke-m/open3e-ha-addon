@@ -26,11 +26,11 @@ ip link | grep $CAN
 bashio::log.info "Preparing to start...checking for devices.json"
 
 if ! test -f /data/devices.json; then
-   bashio::log.info "Running open3e depcit system ... This may take a while"
+   bashio::log.info "Running open3e_depictSystem -c $CAN ... This may take a while"
    cd /data
    open3e_depictSystem -c $CAN
 fi
 
-bashio::log.info "Starting Open3e..."
+bashio::log.info "Starting Open3e... open3e --can $CAN --mqtt $SERVER --mqttuser $USERPWD --mqttformatstring $FORMATSTRING --mqttclientid $CLIENTID --listen $LISTENTOPIC --config /data/devices.json"
 cd /data
 open3e --can $CAN --mqtt $SERVER --mqttuser $USERPWD --mqttformatstring $FORMATSTRING --mqttclientid $CLIENTID --listen $LISTENTOPIC --config /data/devices.json
