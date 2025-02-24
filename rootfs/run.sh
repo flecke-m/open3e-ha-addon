@@ -17,4 +17,4 @@ fi
 
 bashio::log.info "Starting Open3e..."
 cd /data
-open3e --can can0 --mqtt 127.0.0.1:1883:open3e --mqttuser testmqtt:test --mqttformatstring {device}_{ecuAddr:03X}_{didNumber}_{didName} --listen open3e/cmnd --config /data/devices.json
+open3e --can can0 --mqtt 127.0.0.1:1883:open3e --mqttuser testmqtt:test --mqttformatstring {device}_{ecuAddr:03X}_{didNumber}_{didName} --mqttclientid open3e --listen open3e/cmnd --config /data/devices.json

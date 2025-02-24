@@ -14,19 +14,29 @@ init: false
 map:
   - addon_config:rw
 options: {
-  "args": {}
+  "main": {
+    "can": "can0",
+    "Listen-Topic": "open3e/cmnd"
+  },
+  "mqtt": {
+    "Server:Topicname": "127.0.0.1:1883:open3e",
+    "MQTT-User:Password": "testmqtt:test",
+    "MQTT-Format-String": "{device}_{ecuAddr:03X}_{didNumber}_{didName}",
+    "MQTT_ClientID": "open3e"
+  }
 }
 privileged:
   - NET_ADMIN
 schema:
-  "args": {
-      "can": "str?",
-      "ca": "str?",
-      "key": "str?",
-      "cert": "str?",
-      "user": "str?",
-      "password": "str?",
-      "base_topic": "str?"
+  "main": {
+      "can": "str",
+      "Listen-Topic": "str"
+  },
+  "mqtt": {
+      "Server:Topicname": "str",
+      "MQTT-User:Password": "str",
+      "MQTT-Format-String": "str",
+      "MQTT_ClientID": "str"
   }
 services:
   - mqtt:need
