@@ -10,6 +10,6 @@ RUN pip install git+https://github.com/open3e/open3e.git
 
 COPY rootfs /
 RUN chmod a+x /run.sh
-COPY open3e/args /data/args
+COPY data/args.txt /data/args.txt
 
 CMD [ "/run.sh" ]

@@ -17,4 +17,4 @@ fi
 
 bashio::log.info "Starting Open3e..."
 cd /data
-open3e @args
+open3e @args.txt
