@@ -27,7 +27,7 @@ options: {
 }
 privileged:
   - NET_ADMIN
-schema:
+schema: {
   "main": {
       "can": "str",
       "Listen-Topic": "str"
@@ -38,6 +38,7 @@ schema:
       "MQTT-Format-String": "str",
       "MQTT_ClientID": "str"
   }
+}
 services:
   - mqtt:need
 startup: services
