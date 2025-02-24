@@ -19,8 +19,8 @@ options: {
     "Listen-Topic": "open3e/cmnd"
   },
   "mqtt": {
-    "Server:Topicname": "127.0.0.1:1883:open3e",
-    "MQTT-User:Password": "testmqtt:test",
+    "Server_Topic": "127.0.0.1:1883:open3e",
+    "MQTT-User-Password": "user:password",
     "MQTT-Format-String": "{device}_{ecuAddr:03X}_{didNumber}_{didName}",
     "MQTT_ClientID": "open3e"
   }
@@ -33,8 +33,8 @@ schema: {
       "Listen-Topic": "str"
   },
   "mqtt": {
-      "Server:Topicname": "str",
-      "MQTT-User:Password": "str",
+      "Server_Topic": "str",
+      "MQTT-User-Password": "str",
       "MQTT-Format-String": "str",
       "MQTT_ClientID": "str"
   }
