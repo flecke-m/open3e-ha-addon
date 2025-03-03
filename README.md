@@ -11,4 +11,27 @@ On the configuration the username and passwort for a user in your Home Assistant
 
 ![Getting Started](./images/homeassistant-configuration.jpg)
 
+Options:
+
+can: -> should be can0 if not found check network interfaces on your Home Assistant and adjust accordingly
+Listen_Topic: -> the topic where the Add-On is listening to commands
+
+Server_Topic: -> IP:Port:Topic where the data is published too. 127.0.0.1:1883 should be standard due to Mosquitto, Topic open3e can be adjusted
+MQTT_UserPassword: ->  Enter Username:Password of the account you have setup for Open3E in Home Assistant or in the Mosquitto Add-On
+MQTT_FormatString: -> Leave the default option or check the documentation at https://github.com/open3e/open3e for valid options
+MQTT_ClientID: -> ClientID how the Add-On shows up in the MQTT Broker
+
+Startup of the Add-On, where initially the command open3e_depictsystem runs:
+
+![Getting Started](./images/homeassistant-startup.jpg)
+
+
+Using the Add-On for Demo purposes with the MQTT-Explorer and sending a command to the Listen_Topic Endpoint and seeing the reply on the open3e Topic:
+
+![Getting Started](./images/homeassistant-running.jpg)
+
+
+
+
+
 Please note that Add-ons only work on HAOS and Supervised installations see: https://www.home-assistant.io/installation/ 
