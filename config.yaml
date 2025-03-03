@@ -25,8 +25,8 @@ options: {
     "MQTT_ClientID": "open3e"
   }
 }
-# privileged:
-#  - NET_ADMIN
+privileged:
+  - NET_ADMIN
 schema: {
   "main": {
       "can": "str",
