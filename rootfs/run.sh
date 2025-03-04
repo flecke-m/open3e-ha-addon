@@ -19,7 +19,6 @@ bashio::log.info "ClientID:  $CLIENTID"
 
 bashio::log.info "Preparing to start...checking can interface"
 
-ifconfig -a | grep $CAN
 ip link set down $CAN && ip link set $CAN type can bitrate 250000 && ip link set up $CAN
 ip link | grep $CAN
 
