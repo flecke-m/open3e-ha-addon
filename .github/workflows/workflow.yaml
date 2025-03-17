@@ -39,6 +39,6 @@ jobs:
         with:
           args: |
             --${{ matrix.arch }} \
-            --target /data/${{ matrix.addon }} \
+            --target ${{ matrix.addon }} \
             --docker-hub fleckem
             --test
