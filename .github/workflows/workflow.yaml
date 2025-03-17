@@ -33,6 +33,6 @@ jobs:
         with:
           args: |
             --${{ matrix.arch }} \
-            --target /data/open3e-ha-addon \
+            --target /data/open3e \
             --docker-hub fleckem
             --test
